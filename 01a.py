@@ -4501,7 +4501,7 @@ L48
 L36
 '''
 
-lines = test.strip().splitlines()
+lines = full.strip().splitlines()
 dial = 50
 count = 0
 
