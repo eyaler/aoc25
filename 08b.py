@@ -1036,17 +1036,14 @@ dist.sort()
 print(dist)
 
 circ = [{i} for i in range(len(rows))]
-count = 0
 for d, i, j in dist:
     circ_index_i = [m for m, c in enumerate(circ) if i in c][0]
     circ_index_j = [m for m, c in enumerate(circ) if j in c][0]
 
+    print(i, j, circ[circ_index_i], circ[circ_index_j])
+
     if circ_index_i == circ_index_j:
         continue
-
-    count += 1
-
-    print(count, i, j, circ[circ_index_i], circ[circ_index_j])
 
     if len(circ) == 2:
         print(rows[i][0] * rows[j][0])
