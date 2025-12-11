@@ -1,4 +1,4 @@
-from itertools import combinations_with_replacement
+from itertools import combinations
 
 
 test = '''
@@ -208,7 +208,7 @@ for row in rows:
     found = False
     while not found:
         steps += 1
-        subsets = combinations_with_replacement(buttons, steps)
+        subsets = combinations(buttons, steps)
         for subset in subsets:
             result = [sum(button[i] for button in subset) % 2 for i in range(len(target))]
             if result == target:

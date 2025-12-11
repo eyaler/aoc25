@@ -1,4 +1,3 @@
-from itertools import combinations_with_replacement
 from ortools.sat.python import cp_model
 
 
